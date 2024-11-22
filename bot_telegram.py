@@ -197,7 +197,7 @@ def exibir_menu(chat_id):
     menu += "/opcao1 : Check the GDP of Brazil\n"
     menu += "/opcao2 : Check the inflation rate of Brazil\n"
     menu += "/opcao3 : Check the unemployment rate of Brazil\n"
-    menu += "/opcao4 : Say blue"
+    menu += "/opcao4 : exit"
     bot.send_message(chat_id, menu)
 
 bot.polling(none_stop=True)
