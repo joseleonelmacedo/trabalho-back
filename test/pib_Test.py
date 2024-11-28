@@ -11,11 +11,11 @@ dadosPib = pd.DataFrame({
 def calcular_comparacao_pib(ano1, ano2):
     # Verificar se o ano1 existe
     if ano1 not in dadosPib['Ano'].values:
-        raise ValueError(f"O ano {ano1} não foi encontrado nos dados. Por favor, insira um ano válido.")
+        raise ValueError(f"O ano {ano1} nao foi encontrado nos dados. Por favor, insira um ano válido.")
     
     # Verificar se o ano2 existe
     if ano2 not in dadosPib['Ano'].values:
-        raise ValueError(f"O ano {ano2} não foi encontrado nos dados. Por favor, insira um ano válido.")
+        raise ValueError(f"O ano {ano2} nao foi encontrado nos dados. Por favor, insira um ano válido.")
     
     # Obtém os valores do PIB para os anos fornecidos
     pib1 = dadosPib.loc[dadosPib['Ano'] == ano1, 'valor'].values[0]
@@ -35,8 +35,8 @@ def calcular_comparacao_pib(ano1, ano2):
         (2021, 2022, "The GDP of Brazil in 2022 was: R$2,500.00. Compared to 2021, the GDP increased by 13.64%."),
         
         # Casos inválidos
-        (2020, 2023, "O ano 2023 não foi encontrado nos dados. Por favor, insira um ano válido."),
-        (2023, 2022, "O ano 2023 não foi encontrado nos dados. Por favor, insira um ano válido."),
+        (2020, 2023, "O ano 2023 nao foi encontrado nos dados. Por favor, insira um ano válido."),
+        (2023, 2022, "O ano 2023 nao foi encontrado nos dados. Por favor, insira um ano válido."),
     ]
 )
 def test_comparacao_pib(ano1, ano2, expected_message):

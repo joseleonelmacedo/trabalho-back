@@ -11,11 +11,11 @@ dadosDesem = pd.DataFrame({
 def calcular_comparacao_desemprego(ano1, ano2):
     # Verificar se o ano1 existe
     if ano1 not in dadosDesem['Ano'].values:
-        raise ValueError(f"O ano {ano1} não foi encontrado nos dados. Por favor, insira um ano válido.")
+        raise ValueError(f"O ano {ano1} nao foi encontrado nos dados. Por favor, insira um ano válido.")
     
     # Verificar se o ano2 existe
     if ano2 not in dadosDesem['Ano'].values:
-        raise ValueError(f"O ano {ano2} não foi encontrado nos dados. Por favor, insira um ano válido.")
+        raise ValueError(f"O ano {ano2} nao foi encontrado nos dados. Por favor, insira um ano válido.")
     
     # Obtém os valores da taxa de desemprego para os anos fornecidos
     desemprego1 = dadosDesem.loc[dadosDesem['Ano'] == ano1, 'Taxa'].values[0]
