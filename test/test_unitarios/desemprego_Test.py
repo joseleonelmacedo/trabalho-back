@@ -35,8 +35,8 @@ def calcular_comparacao_desemprego(ano1, ano2):
         (2021, 2022, "The unemployment rate in Brazil in 2022 was: 9.30%. Compared to 2021, the unemployment rate decreased by 36.73%."),
         
         # Casos inválidos
-        (2020, 2023, "O ano 2023 não foi encontrado nos dados. Por favor, insira um ano válido."),
-        (2023, 2022, "O ano 2023 não foi encontrado nos dados. Por favor, insira um ano válido."),
+        (2020, 2023, "O ano 2023 nao foi encontrado nos dados. Por favor, insira um ano válido."),
+        (2023, 2022, "O ano 2023 nao foi encontrado nos dados. Por favor, insira um ano válido."),
     ]
 )
 def test_comparacao_desemprego(ano1, ano2, expected_message):
