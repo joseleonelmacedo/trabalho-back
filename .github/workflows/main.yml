@@ -1,0 +1,31 @@
+name: Python pytest workflow
+
+on: 
+  push:
+    branches:
+      - main  # ou qualquer branch que você preferir
+  pull_request:
+    branches:
+      - main  # ou qualquer branch que você preferir
+
+jobs:
+  test:
+    runs-on: ubuntu-latest  # ou qualquer outro sistema operacional que você prefira
+
+    steps:
+      - name: Check out the repository
+        uses: actions/checkout@v2
+
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.9'  # defina a versão do Python que você está utilizando
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt  # instale as dependências do seu projeto
+
+      - name: Run pytest
+        run: |
+          pytest  # ou pytest <outro_comando>
